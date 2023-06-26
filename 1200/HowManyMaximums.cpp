@@ -9,23 +9,16 @@ int main(){
         cin >> n;
         string s;
         cin >> s;
-        ll a[n];
-        ll tempmax=0;
-        for(ll i=0;i<n-1;i++)
+        ll tempmax=1;
+        for(ll i=0;i<n-1;++i)
         {
-            if(s[i]==0)
+            if(s[i]=='1' && s[i+1]=='0')
             {
-                // ai < a(i+1);
-                tempmax=i+1;
-            }
-            else if(s[i]==1)
-            {
-                // ai > a(i+1);
-                tempmax=i;
-
+                tempmax++;
             }
         }
-        cout << tempmax+1 << endl;
+        cout << tempmax << endl;
 
     }
+    return 0;
 }
