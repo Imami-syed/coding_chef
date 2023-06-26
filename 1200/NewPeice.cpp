@@ -14,6 +14,23 @@ int main(){
         if((a+b)%2==0) pab=true;
         if((p+q)%2==0) ppq=true;
         
+        if(a==p && b==q){
+            cout << 0 << endl;
+        }
+        else if(pab&&ppq){
+            cout << 2 << endl;
+        }
+        else if(!pab&&!ppq){
+            cout << 2 << endl;
+        }
+        else if(pab&&!ppq){
+            cout << 1 << endl;
+        }
+        else if(!pab&&ppq){
+            cout << 1 << endl;
+            
+        }
     }
+
     return 0;
 }
